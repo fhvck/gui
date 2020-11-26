@@ -1,0 +1,145 @@
+{
+    "bscommands":[
+        "move",
+        "atk", "attack",
+        "exit", "bye",
+        "dmg", "fire",
+        "remotehack", "rmh",
+        "help",
+        "map"
+    ],
+    "BSSheet":{
+        "move": {
+            "params": [
+                "-pos"
+            ],
+            "output": "spostati in pos se corrisponde ad un tile adiacente.",
+            "notes":"-pos puo' anche non essere specificato, la posizione va scritta con questa formula: x,y (senza spazi)"
+        },
+        "atk": {
+            "params": [
+                "-bot", "-port", "-pos"
+            ],
+            "output": "ritorna gli hash decodificati di -bot, port e' opzionale",
+            "notes": "specifica sempre -bot e -port con la syx (-bot bot -pos pos -port port)"
+        },
+        "dmg": {
+            "params": [],
+            "output": "elimina il bot",
+            "notes": "devi avere l'accesso al bot, ottienilo hackerandolo (o con rmh)"
+        },
+        "fire": {
+            "params": ["-id", "-pos"],
+            "output": "elimina il bot",
+            "notes": "devi avere l'accesso al bot, ottienilo hackerandolo (o con rmh"
+        },
+        "remotehack": {
+            "params": ["-id", "-pos"],
+            "output": "sfrutta la porta 21 per hackerare un robot bloccato, non usa gli hash.",
+            "notes": "seleziona il bot usando il suo id o la pos."
+        },
+        "rmh": {
+            "params": ["-id", "-pos"],
+            "output": "sfrutta la porta 21 per hackerare un robot bloccato, non usa gli hash.",
+            "notes": "seleziona il bot usando il suo id o la pos."
+        },
+        "help": {
+            "params": [],
+            "output": "mostra una lista dei comandi",
+            "notes": ""
+        },
+        "attack": {
+            "params": [
+                "-bot", "-port", "-pos"
+            ],
+            "output": "ritorna gli hash decodificati di -bot, port e' opzionale",
+            "notes": "specifica sempre -bot e -port con la syx (-bot bot -pos pos -port port)"
+        },
+        "map": {
+            "params": ["-mode"],
+            "output": "mostra la mappa avanzata",
+            "notes": "specifica la modalità std con -m std per vedere la mappa in stile originale."
+        }
+    },
+    "commands": [
+        "help",
+        "hack",
+        "scan",
+        "destroy",
+        "shutdown",
+        "hash",
+        "translater",
+        "encoder",
+        "decoder",
+        "exit",
+        "bshell",
+        "crack",
+        "info"
+    ],
+    "cheatsheet": {
+        "hack": {
+            "params": [
+                "port"
+            ],
+            "output": "se port è sbloccata usala per disattivare i sistemi di sicurezza del bot"
+        },
+        "scan": {
+            "params": [
+                "port"
+            ],
+            "output": "restituisce una lista delle porte attive o disabilitate",
+            "notes": "se port è specificato scansionala"
+        },
+        "destroy": {
+            "params": [],
+            "output": "elimina il bot",
+            "notes": "devi avere l'accesso al bot, ottienilo hackerandolo"
+        },
+        "shutdown": {
+            "params": [],
+            "output": "elimina il bot",
+            "notes": "devi avere l'accesso al bot, ottienilo hackerandolo"
+        },
+        "hash": {
+            "params": [
+                "-res",
+                "-port"
+            ],
+            "output": "usa una chiave per bypassare una porta o ottieni le hash della chiave",
+            "notes": "-res bypassa una porta sfruttando un hash decodificato, -port p mostra l'hash codificato di p"
+        },
+        "encoder": {
+            "params": [
+                "-text"
+            ],
+            "output": "codifica una stringa",
+            "notes": "-text t codifica t"
+        },
+        "decoder": {
+            "params": [
+                "-text"
+            ],
+            "output": "codifica una stringa",
+            "notes": "-text t codifica t"
+        },
+        "translater": {
+            "params": [
+                "-text",
+                "-mode"
+            ],
+            "output": "codifica o decodifica una stringa",
+            "notes": "-text t codifica/decodifica t, -mode 1 = codifica, -mode 2 = decodifica"
+        },
+        "exit": {
+            "params": [],
+            "output": "torna alla mappa",
+            "notes": ""
+        },
+        "crack": {
+            "params": [
+                "-port"
+            ],
+            "output": "gain bshell access"
+        }
+    }
+}
